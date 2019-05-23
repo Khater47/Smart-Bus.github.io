@@ -2,10 +2,205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="styleSheet.css" type="text/css" rel="stylesheet"/>
     <title>Smart Bus</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styleSheet.css" type="text/css"/>
+
 </head>
 <body>
-    <h1>Smart Bus</h1>
+
+    <div class="container-fluid">
+
+        <!-- nav bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="col-xs-12">
+                    <ul class="nav nav-tabs nav-justified text-center">
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">AmI<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#steps">Steps</a></li>
+                                <li><a href="#ami-features">Features</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Project <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#purpose-scope">Purpose and scope</a></li>
+                                <li><a href="#group">Group members</a></li>
+                                <li><a href="#architecture">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#issues">Open issues</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- central image -->
+        <div class="row">
+            <div class="col-xs-12 text-center" id="central">
+                <h1>Smart Bus</h1>
+            </div>
+        </div>
+
+        <!-- contents -->
+        <div class="container">
+            <!-- vision -->
+            <div class="row" id="vision">
+                <div class="col-xs-12 text-center">
+                    <h2>Vision</h2>
+                </div>
+            </div>
+            <div calss="row">
+                <div class="col-xs-12">
+                    <ul>
+                        <li>Smart-Bus is an AmI system that is targeting a specific category of public transports users to help them in their daily usage.</li>
+                        <li>Smart-Bus provides information to all users about the bus before it arrives e.g. when will the bus arrive at a given stop, the number of empty seats, temperature and air quality, which allow the users to make a decision either waiting for the bus or searching for another commute solution to reach the destination.</li>
+                        <li>For the users who require help to get in the bus like people who use wheelchairs, the system provides them with more options to facilitate their experience by interacting with the bus through an application which allow them to perform the following actions:
+                            <ul>
+                                <li>They can choose the bus they are going to take and by doing that the system will inform the driver about them so he can take necessary actions to help them if needed.</li>
+                                <li>The system will track the location of that special user while he is waiting to make sure he is still waiting for the bus and to use the location for further actions.</li>
+                                <li>Before the bus reaches the stop the system will guide the other bus passengers to free the area reserved for wheelchairs by means of a recorded voice message through the bus’s sound system and flashing lights indicating the area that needs to be free to facilitate the process of getting in or off the bus.</li>
+                                <li>The system also provides a mechanism to check if the reserved area is freed or not.</li>
+                                <li>When the bus reaches the location of the user, a mechanical slider will be extended automatically to allow the wheelchair to get in the bus in a fast, easy and more comfortable way so the driver will not need to leave his driver seat to help unless it’s an emergency.</li>
+                                <li>Once they are inside, the system will give them more options e.g. communicate with the driver in case of an emergency, to choose at which stop they will get off the bus so the system initiate preparing for that process by means of another recorded voice message to alert other passengers to free a path to the door and extend the mechanical slider so the wheelchair can get out from the bus to the sidewalk.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AmI main steps -->
+            <div class="row" id="steps">
+                <div class="col-xs-12 text-center">
+                    <h2>AmI main steps</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 text-center" >
+                    <h3>Sensing</h3>
+                    <p>Number of empty seats, temperature and air quality are perceived to inform the user. Detection if the wheelchair area has been freed. User location.</p>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <h3>Reasoning</h3>
+                    <p>Location tracking before to be sure the user is still waiting for the bus. When wheelchair people have to get off the bus, system will start its process to help them.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 text-center">
+                    <h3>Acting</h3>
+                    <p>Mechanical slider to help the user to get in and off the bus. Recorded voice and flashing lights to free the reserved area. System provides informations before the bus arrives. System informs the driver if the wheelchair people are going to take the bus. System matches bus position with the user one.</p>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <h3>Interacting</h3>
+                    <p>Wheelchair people can choose the bus they are going to take, they can communicate with the driver in case of emergency through the system, they can choose the stop where they want to get off the bus.</p>
+                </div>
+            </div>
+
+            <!-- AmI features -->
+            <div class="row" id="ami-features">
+                <div class="col-xs-12 text-center">
+                    <h2>AmI features</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-center" >
+                    <h3>Sensitive</h3>
+                    <p>Proximity sensors are placed around in diverse spots reserved for wheelchairs so that once the disabled person reserves a place in the bus, the LEDs will start flashing so that the spot is freed.</p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <h3>Intelligent</h3>
+                    <p>It takes the appropriate course of action based on the needs of the user, so it can judge the situation and advice them on taking further actions.</p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <h3>Responsive</h3>
+                    <p>Once the disabled person reserves the stop, the system will send a notification to the bus driver which will activate the mechanical slider to open automatically so that the person can get inside the bus easily.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <h3>Adaptive</h3>
+                    <p></p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <h3>Transparent</h3>
+                    <p></p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <h3>Ubiquitous</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Purpose and scope -->
+            <div class="row" id="purpose-scope">
+                <div class="col-xs-12 text-center">
+                    <h2>Purpose & Scope</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <p>TO BE WRITTEN</p>
+                </div>
+            </div>
+
+            <!-- Group members -->
+            <div class="row" id="group">
+                <div class="col-xs-12 text-center">
+                    <h2>Group members</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <h4></h4>
+                    <p>TO BE WRITTEN</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4></h4>
+                    <p>TO BE WRITTEN</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4></h4>
+                    <p>TO BE WRITTEN</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4></h4>
+                    <p>TO BE WRITTEN</p>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="row" id="architecture">
+                <div class="col-xs-12 text-center">
+                    <h2>Architecture</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="img/AmI%20Smart%20Bus.jpg" alt="architecture" class="img-responsive"/>
+                </div>
+            </div>
+
+            <!-- Open issues -->
+            <div class="row" id="issues">
+                <div class="col-xs-12 text-center">
+                    <h2>Open issues</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <p>TO BE WRITTEN</p>
+                </div>
+            </div>
+    </div>
+
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
